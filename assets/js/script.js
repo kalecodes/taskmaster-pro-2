@@ -1,5 +1,9 @@
 var tasks = {};
 
+$("#modalDueDate").datepicker({
+  minDate: 0
+});
+
 // make task lists sortable with jQuery UI
 $(".card .list-group").sortable({
   connectWith: $(".card .list-group"),
@@ -68,7 +72,6 @@ $("#trash").droppable({
     console.log("out");
   }
 });
-
 
 var createTask = function(taskText, taskDate, taskList) {
   // create elements that make up a task item
